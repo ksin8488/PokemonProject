@@ -2,5 +2,8 @@ package pokemon.controller;
 
 public class PokemonController
 {
-
+	public void start()
+	{
+		System.out.println("Hello");
+	}
 }
