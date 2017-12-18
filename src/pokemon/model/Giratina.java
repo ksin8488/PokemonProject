@@ -17,7 +17,7 @@ public class Giratina extends Pokemon implements Ghost, Dragon
 	
 	public void roarOfTime()
 	{
-		
+		System.out.print("Giratina uses Roar of Time!");
 	}
 	
 	public String dragonBreath()
@@ -37,12 +37,12 @@ public class Giratina extends Pokemon implements Ghost, Dragon
 	
 	public void shadowBall()
 	{
-		
+		System.out.print("Giratina uses Shadow Ball!");
 	}
 	
 	public int shadowClaw()
 	{
-		int attackPower = 0;
+		int attackPower = 70;
 		
 		return attackPower;
 	}
