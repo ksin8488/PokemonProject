@@ -40,11 +40,17 @@ public class Dragonair extends Pokemon implements Dragon
 			setup();
 		}
 		
+		public double enhancementModifier()
+		{
+			double enhancementModifier = 0.90;
+			return enhancementModifier;
+		}
+		
 		protected void setup()
 		{
 			this.setAttackPoints(84);
 			this.setCanEvolve(false);
-			//this.setEnhancementModifier(.89);
+			this.setEnhancementModifier(.89);
 			this.setHealthPoints(61);
 		}
 }

@@ -40,11 +40,17 @@ public class Shelgon extends Pokemon implements Dragon
 			setup();
 		}
 		
+		public double enhancementModifier()
+		{
+			double enhancementModifier = 0.90;
+			return enhancementModifier;
+		}
+		
 		protected void setup()
 		{
 			this.setAttackPoints(95);
 			this.setCanEvolve(true);
-			//this.setEnhancementModifier(.89);
+			this.setEnhancementModifier(.89);
 			this.setHealthPoints(65);
 		}
 }
