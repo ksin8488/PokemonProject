@@ -10,6 +10,11 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Creates the panel for the GUI and manipulates objects and layout as well as interaction within the panel
+ * @author ksin8488
+ *
+ */
 public class PokemonPanel extends JPanel
 {
 	private PokemonController appController;
@@ -51,6 +56,10 @@ public class PokemonPanel extends JPanel
 		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
 	}
 	
+	/**
+	 * Initializes GUI data members then calls the methods when program runs
+	 * @param appController checks if the program ran
+	 */
 	public PokemonPanel(PokemonController appController)
 	{
 		super();
@@ -93,6 +102,32 @@ public class PokemonPanel extends JPanel
 	
 	private void setupPanel()
 	{
+		this.setBackground(Color.red);
+		this.setLayout(appLayout);
+		this.add(healthLabel);
+		this.add(attackLabel);
+		this.add(nameLabel);
+		this.add(numberLabel);
+		this.add(evolvableLabel);
+		this.add(modifierLabel);
+		this.add(iconLabel);
+		
+		this.add(evolvableBox);
+		this.add(nameField);
+		this.add(numberField);
+		this.add(attackField);
+		this.add(healthField);
+		this.add(modifierField);
+		this.add(descriptionArea);
+		this.add(typeArea);
+		
+		this.add(saveButton);
+		this.add(clearButton);
+		this.add(pokedexDropdown);
+		this.add(firstType);
+		this.add(secondType);
+		this.add(thirdType);
+		this.add(fourthType);
 		
 	}
 	
