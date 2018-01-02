@@ -57,7 +57,52 @@ public class PokemonPanel extends JPanel
 		this.appController = appController;
 		
 		//Initialize GUI data members
+		healthLabel = new JLabel();
+		attackLabel = new JLabel();
+		nameLabel = new JLabel();
+		numberLabel = new JLabel();
+		evolvableLabel = new JLabel();
+		modifierLabel = new JLabel();
+		iconLabel = new JLabel();
+		
+		evolvableBox = new JCheckBox();
+		nameField = new JTextField();
+		numberField = new JTextField();
+		attackField = new JTextField();
+		healthField = new JTextField();
+		modifierField = new JTextField();
+		
+		descriptionArea = new JTextArea();
+		typeArea = new JTextArea();
+		
+		saveButton = new JButton();
+		clearButton = new JButton();
+		pokedexDropdown = new JComboBox();
+		firstType = new JPanel();
+		secondType = new JPanel();
+		thirdType = new JPanel();
+		fourthType = new JPanel();
+		
+		
 		
 		//Method Calls
+		setupPanel();
+		setupLayout();
+		setupListeners();
+	}
+	
+	private void setupPanel()
+	{
+		
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		
 	}
 }
