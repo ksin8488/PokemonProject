@@ -48,34 +48,3 @@ public class Shelgon extends Pokemon implements Dragon
 			this.setHealthPoints(65);
 		}
 }
-
- 
-
-/*ADD THIS CODE TO THE POKEMON
- * public Turtwig()
- * {
- * super(387, "Turtwig");
- * setup();
- * }
- * 
- * public Turtwig(String name)
- * {
- * super(387, name);
- * setup();
- * }
- * 
- * public Turtwig(int number, String name)
- * {
- * super(number, name);
- * setup();
- * }
- * 
- * @Override
- * protected void setup()
- * {
- * this.setAttackPoints(234);
- * this.setCanEvolve(false);
- * this.setEnhancementModifier(.89);
- * this.setHealthPoints(123);
- * }
- */
