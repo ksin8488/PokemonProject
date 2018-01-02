@@ -26,4 +26,25 @@ public class Dragonair extends Pokemon implements Dragon
 			
 			return roar;
 		}
+		
+		//Setup code
+		public Dragonair()
+		{
+			super(148, "Dragonair");
+			setup();
+		}
+		
+		public Dragonair(String name)
+		{
+			super(148, name);
+			setup();
+		}
+		
+		protected void setup()
+		{
+			this.setAttackPoints(84);
+			this.setCanEvolve(false);
+			//this.setEnhancementModifier(.89);
+			this.setHealthPoints(61);
+		}
 }

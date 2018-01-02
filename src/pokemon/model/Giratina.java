@@ -46,4 +46,25 @@ public class Giratina extends Pokemon implements Ghost, Dragon
 		
 		return attackPower;
 	}
+	
+	//Setup code
+	public Giratina()
+	{
+		super(487, "Giratina");
+		setup();
+	}
+	
+	public Giratina(String name)
+	{
+		super(487, name);
+		setup();
+	}
+	
+	protected void setup()
+	{
+		this.setAttackPoints(100);
+		this.setCanEvolve(false);
+		//this.setEnhancementModifier(.89);
+		this.setHealthPoints(150);
+	}
 }

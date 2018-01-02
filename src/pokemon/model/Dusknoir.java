@@ -25,4 +25,25 @@ public class Dusknoir extends Pokemon implements Ghost
 		
 		return attackPower;
 	}
+	
+	//Setup code
+	public Dusknoir()
+	{
+		super(477, "Dusknoir");
+		setup();
+	}
+	
+	public Dusknoir(String name)
+	{
+		super(477, name);
+		setup();
+	}
+	
+	protected void setup()
+	{
+		this.setAttackPoints(100);
+		this.setCanEvolve(false);
+		//this.setEnhancementModifier(.89);
+		this.setHealthPoints(45);
+	}
 }

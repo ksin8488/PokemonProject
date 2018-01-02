@@ -13,4 +13,25 @@ public class Salamence extends Shelgon implements Dragon
 		System.out.print("Salamance uses Roar of Time");
 	}
 	
+	//Setup code
+	public Salamence()
+	{
+		super(373, "Salamence");
+		setup();
+	}
+	
+	public Salamence(String name)
+	{
+		super(373, name);
+		setup();
+	}
+	
+	@Override //only used for when it is implementing from elsewhere
+	protected void setup()
+	{
+		this.setAttackPoints(135);
+		this.setCanEvolve(false);
+		//this.setEnhancementModifier(.89);
+		this.setHealthPoints(95);
+	}
 }
