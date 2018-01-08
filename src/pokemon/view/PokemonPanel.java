@@ -160,6 +160,95 @@ public class PokemonPanel extends JPanel
 		
 	}
 	
+	/**
+	 * Updates the type panels to match the background of the type(s) that the pokemon may have. Including if it has multiple types.
+	 */
+	private void updateTypePanels() //change what goes on in the GUI
+	{
+		String [] types = appController.getPokedex().get(pokedexDropdown.getSelectedIndex()).getPokemonTypes();
+		
+		//Change this to match your 3 minimum Types in your pokedex
+		if (types[0].equals("Dark"))
+		{
+			firstType.setBackground(Color.BLACK);
+		}
+		else if (types[0].equals("Dragon"))
+		{
+			firstType.setBackground(Color.BLUE);
+		}
+		else if (types[0].equals("Ghost"))
+		{
+			firstType.setBackground(Color.DARK_GRAY);
+		}
+		else
+		{
+			firstType.setBackground(Color.WHITE);
+		}
+		
+		
+		if(types.length > 1)	//sets up types for pokemon that have multiple types
+		{
+			if(types[1].equals("Dark"))
+			{
+				secondType.setBackground(Color.BLACK);
+			}
+			else if (types[1].equals("Dragon"))
+			{
+				firstType.setBackground(Color.BLUE);
+			}
+			else if (types[1].equals("Ghost"))
+			{
+				firstType.setBackground(Color.DARK_GRAY);
+			}
+			else
+			{
+				firstType.setBackground(Color.WHITE);
+			}
+			
+			
+			if (types.length == 3)	//for pokemon that have 3 types total
+			{
+				if(types[2].equals("Dark"))	//remember index starts from 0
+				{
+					secondType.setBackground(Color.BLACK);
+				}
+				else if (types[2].equals("Dragon"))
+				{
+					firstType.setBackground(Color.BLUE);
+				}
+				else if (types[2].equals("Ghost"))
+				{
+					firstType.setBackground(Color.DARK_GRAY);
+				}
+				else
+				{
+					firstType.setBackground(Color.WHITE);
+				}
+			}
+			
+			
+			if (types.length == 4)	//for pokemon that have 4 types total
+			{
+				if(types[3].equals("Dark"))	//remember index starts from 0
+				{
+					secondType.setBackground(Color.BLACK);
+				}
+				else if (types[3].equals("Dragon"))
+				{
+					firstType.setBackground(Color.BLUE);
+				}
+				else if (types[3].equals("Ghost"))
+				{
+					firstType.setBackground(Color.DARK_GRAY);
+				}
+				else
+				{
+					firstType.setBackground(Color.WHITE);
+				}
+			}
+		}
+	}
+	
 	private void setupLayout()
 	{
 		
@@ -167,6 +256,16 @@ public class PokemonPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		pokedexDropdown.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent selection)
+				{
+					int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
+					updatePokedexInfo(selectedPokemonIndex);
+					updateImage();
+					updateTypePanels();
+					repaint();
+				}
+			});	
 	}
 }
