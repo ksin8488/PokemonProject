@@ -26,4 +26,31 @@ public class Darkrai extends Pokemon implements Dark
 	{
 		System.out.print("You start thinking of your greatest fear.");
 	}
+	
+	//Setup code
+			public Darkrai()
+			{
+				super(491, "Darkrai");
+				setup();
+			}
+			
+			public Darkrai(String name)
+			{
+				super(491, name);
+				setup();
+			}
+			
+			public double enhancementModifier()
+			{
+				double enhancementModifier = 0.90;
+				return enhancementModifier;
+			}
+			
+			protected void setup()
+			{
+				this.setAttackPoints(90);
+				this.setCanEvolve(false);
+				this.setEnhancementModifier(.89);
+				this.setHealthPoints(70);
+			}
 }
