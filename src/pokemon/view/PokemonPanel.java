@@ -66,27 +66,27 @@ public class PokemonPanel extends JPanel
 		this.appController = appController;
 		
 		//Initialize GUI data members
-		healthLabel = new JLabel();
-		attackLabel = new JLabel();
-		nameLabel = new JLabel();
-		numberLabel = new JLabel();
-		evolvableLabel = new JLabel();
-		modifierLabel = new JLabel();
+		healthLabel = new JLabel("health");
+		attackLabel = new JLabel("attack");
+		nameLabel = new JLabel("name");
+		numberLabel = new JLabel("number");
+		evolvableLabel = new JLabel("evolvable");
+		modifierLabel = new JLabel("modifier");
 		
 		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/okemon/view/images/TransparentPokeball.png")), JLabel.CENTER);
 		
 		evolvableBox = new JCheckBox();
-		nameField = new JTextField();
-		numberField = new JTextField();
-		attackField = new JTextField();
-		healthField = new JTextField();
-		modifierField = new JTextField();
+		nameField = new JTextField("name");
+		numberField = new JTextField("##");
+		attackField = new JTextField("ap");
+		healthField = new JTextField("hp");
+		modifierField = new JTextField("mod");
 		
-		descriptionArea = new JTextArea();
-		typeArea = new JTextArea();
+		descriptionArea = new JTextArea(5, 10);
+		typeArea = new JTextArea(4,15);
 		
-		saveButton = new JButton();
-		clearButton = new JButton();
+		saveButton = new JButton("save");
+		clearButton = new JButton("clear");
 		pokedexDropdown = new JComboBox();
 		firstType = new JPanel();
 		secondType = new JPanel();
