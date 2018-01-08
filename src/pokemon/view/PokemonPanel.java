@@ -96,9 +96,37 @@ public class PokemonPanel extends JPanel
 		
 		
 		//Method Calls
+		setupComboBox();
+		setupTypePanels();
+		updateImage();
 		setupPanel();
 		setupLayout();
 		setupListeners();
+	}
+	
+	/**
+	 * Creates a model view controller in our Panel and sets it
+	 */
+	private void setupComboBox()
+	{
+		DefaultComboBoxModel pokemonModel = new DefaultComboBoxModel(appController.convertPokedex());
+		pokedexDropdown.setModel(pokemonModel);
+	}
+	
+	/**
+	 * Sets up the type panels that we have created
+	 */
+	private void setupTypePanels()
+	{
+		firstType.setSize(50, 50);
+		secondType.setSize(50, 50);
+		thirdType.setSize(50, 50);
+		fourthType.setSize(50, 50);
+	}
+	
+	private void updateImage()
+	{
+		
 	}
 	
 	private void setupPanel()
