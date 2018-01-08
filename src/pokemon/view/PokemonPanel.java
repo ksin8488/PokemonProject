@@ -72,7 +72,8 @@ public class PokemonPanel extends JPanel
 		numberLabel = new JLabel();
 		evolvableLabel = new JLabel();
 		modifierLabel = new JLabel();
-		iconLabel = new JLabel();
+		
+		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/okemon/view/images/TransparentPokeball.png")), JLabel.CENTER);
 		
 		evolvableBox = new JCheckBox();
 		nameField = new JTextField();

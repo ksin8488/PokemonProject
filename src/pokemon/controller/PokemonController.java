@@ -53,6 +53,21 @@ public class PokemonController
 		return false;
 	}
 	
+	/**
+	 * Retrieves data from the Pokedex.
+	 * @return returns the names of the Pokemon.
+	 */
+	public String [] convertPokedex()
+	{
+		String [] names = new String [pokedex.size()];
+		
+		for (int index = 0; index < pokedex.size(); index++)
+		{
+			names[index] = pokedex.get(index).getName();
+		}
+		
+		return names;
+	}
 	
 	public void start()
 	{
