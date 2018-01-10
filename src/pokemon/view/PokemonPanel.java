@@ -64,6 +64,7 @@ public class PokemonPanel extends JPanel
 	{
 		super();
 		this.appController = appController;
+		this.appLayout = new SpringLayout();
 		
 		//Initialize GUI data members
 		healthLabel = new JLabel("health");
@@ -261,7 +262,7 @@ public class PokemonPanel extends JPanel
 				public void actionPerformed(ActionEvent selection)
 				{
 					int selectedPokemonIndex = pokedexDropdown.getSelectedIndex();
-					updatePokedexInfo(selectedPokemonIndex);
+					updatePokedexinfo(selectedPokemonIndex);
 					updateImage();
 					updateTypePanels();
 					repaint();
