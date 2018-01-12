@@ -114,7 +114,7 @@ public abstract class Pokemon
 	 */
 	public double getEnhancementModifier()
 	{
-		return getEnhancementModifier();
+		return enhancementModifier;
 	}
 
 	/**

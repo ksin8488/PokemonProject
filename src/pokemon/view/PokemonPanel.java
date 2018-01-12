@@ -95,6 +95,7 @@ public class PokemonPanel extends JPanel
 		numberField = new JTextField("##");
 		attackField = new JTextField("ap");
 		healthField = new JTextField("hp");
+		appLayout.putConstraint(SpringLayout.EAST, healthLabel, 0, SpringLayout.EAST, healthField);
 		modifierField = new JTextField("mod");
 		
 		descriptionArea = new JTextArea(5, 10);
@@ -311,14 +312,12 @@ public class PokemonPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.EAST, modifierLabel, -6, SpringLayout.WEST, modifierField);
 		appLayout.putConstraint(SpringLayout.SOUTH, evolvableBox, -1, SpringLayout.NORTH, modifierField);
 		appLayout.putConstraint(SpringLayout.NORTH, modifierField, -5, SpringLayout.NORTH, attackLabel);
-		appLayout.putConstraint(SpringLayout.SOUTH, descriptionArea, -192, SpringLayout.SOUTH, this);
 		appLayout.putConstraint(SpringLayout.EAST, descriptionArea, -10, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.WEST, typeArea, 320, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.EAST, typeArea, -10, SpringLayout.EAST, this);
 		appLayout.putConstraint(SpringLayout.NORTH, descriptionArea, 10, SpringLayout.SOUTH, typeArea);
 		appLayout.putConstraint(SpringLayout.WEST, descriptionArea, 0, SpringLayout.WEST, typeArea);
 		appLayout.putConstraint(SpringLayout.NORTH, typeArea, 22, SpringLayout.NORTH, this);
-		appLayout.putConstraint(SpringLayout.SOUTH, typeArea, -250, SpringLayout.SOUTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, saveButton, 10, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.SOUTH, saveButton, -10, SpringLayout.SOUTH, this);
 		appLayout.putConstraint(SpringLayout.NORTH, clearButton, 0, SpringLayout.NORTH, saveButton);
@@ -328,7 +327,6 @@ public class PokemonPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.WEST, pokedexDropdown, 113, SpringLayout.EAST, saveButton);
 		appLayout.putConstraint(SpringLayout.NORTH, firstType, 10, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, firstType, 0, SpringLayout.WEST, saveButton);
-		appLayout.putConstraint(SpringLayout.SOUTH, firstType, -242, SpringLayout.NORTH, saveButton);
 		appLayout.putConstraint(SpringLayout.WEST, secondType, 6, SpringLayout.EAST, firstType);
 		appLayout.putConstraint(SpringLayout.SOUTH, secondType, 0, SpringLayout.SOUTH, firstType);
 		appLayout.putConstraint(SpringLayout.WEST, thirdType, 6, SpringLayout.EAST, secondType);
