@@ -100,6 +100,14 @@ public abstract class Pokemon
 	{
 		this.attackPoints = attackPoints;
 	}
+	
+	/**
+	 * @param enhancmentModifier the enhancmentModifier to set
+	 */
+	public void setEnhancementModifier(double enhancmentModifier)
+	{
+		this.enhancementModifier = enhancementModifier;
+	}
 
 	/**
 	 * @return the enhancmentModifier
@@ -107,14 +115,6 @@ public abstract class Pokemon
 	public double getEnhancementModifier()
 	{
 		return getEnhancementModifier();
-	}
-
-	/**
-	 * @param enhancmentModifier the enhancmentModifier to set
-	 */
-	public void setEnhancementModifier(double enhancmentModifier)
-	{
-		this.enhancementModifier = enhancementModifier;
 	}
 
 	/**
