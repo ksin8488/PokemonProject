@@ -1,0 +1,7 @@
+Darkrai,491,70,90,0.0,false
+Dragonair,148,61,84,0.0,false
+Dusknoir,477,45,100,0.0,false
+Giratina,487,150,100,0.0,false
+Salamence,373,95,135,0.0,false
+Shelgon,372,65,95,0.0,true
+Umbreon,187,95,65,0.0,false
