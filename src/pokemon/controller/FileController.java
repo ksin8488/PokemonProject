@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class FileController
 {
-	public static void savePokemonToFile(ArrayList<Pokemon> pokedex)
+	public static void savePokemonToFile(ArrayList<Pokemon> pokedex)		//static being used because File doesn't need to read itself or anything.
 	{
 		File saveFile = new File("Saved Pokedex.txt");	//create a file that is a text document
 		try

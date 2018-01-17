@@ -45,12 +45,28 @@ public class PokemonController
 	
 	public boolean isValidInteger(String input)
 	{
-		return false;
+		try
+		{
+			Integer.parseInt(input);
+		}
+		catch(NumberFormatException e)
+		{
+			return false;	//not a integer
+		}
+		return true;
 	}
 	
 	public boolean isValidDouble(String input)
 	{
-		return false;
+		try
+		{
+			Double.parseDouble(input);
+		}
+		catch(NumberFormatException e)
+		{
+			return false;	//not a double
+		}
+		return true;
 	}
 	
 	/**
@@ -69,6 +85,15 @@ public class PokemonController
 		return names;
 	}
 	
+	/**
+	 * Updates the selected pokemon from the PokemonPanel
+	 * @param selection	- if it's selected
+	 * @param health - health points of the pokemon
+	 * @param attack - attack points of the pokemon
+	 * @param evolve - whether or not the pokemon can evolve
+	 * @param modify - modifier for the pokemon
+	 * @param name - name of the pokemon
+	 */
 	public void updateSelected(int selection, int health, int attack, boolean evolve, double modify, String name)
 	{
 		Pokemon selected = pokedex.get(selection);
@@ -78,6 +103,8 @@ public class PokemonController
 		selected.setEnhancementModifier(modify);
 		selected.setName(name);
 		selected.setHealthPoints(health);
+		
+		FileController.savePokemonToFile((ArrayList<Pokemon>) pokedex);	//Don't need to define because it is static. Just tells it to run the save method.
 	}
 	
 	public void start()
